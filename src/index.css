@@ -1,0 +1,317 @@
+/*font style*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+/*root */
+:root{
+    --blue:#1b2941;
+    --green:#8bccbc;
+}
+*{
+    font-family: 'Rajdhani',sans-serif;
+    text-transform:none;
+    transition:all .2s linear;
+    margin:0;
+    padding:0;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+*::selection{
+    background-color:blue;
+    color:white;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.btn{
+    padding:1.5rem;
+    font-size: 2rem;
+    color:white;
+    background: #1b2941;
+    cursor: pointer;
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0.5rem 0.5rem #8bccbc;
+    border-radius:15px;
+    margin-right:1.7rem;
+}
+.btn::before{
+    content:'';
+    position:absolute;
+    top:-1rem;
+    left:-100%;
+    background: #fff;
+    height:150%;
+    width:20%;
+    transform:rotate(25deg);
+    z-index:-1;
+}
+.btn:hover::before  {
+    transition:.5s linear;
+    left:120%;
+}
+header {
+    align-items:center;
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow: #8bccbc;
+    position: fixed;
+    padding:1.6rem 7%;
+    background:#1b2941;
+}
+/* .logo{
+    height:10rem;
+    width:10rem;
+} */
+header .navbar ul{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    list-style:none;
+    margin-left:60rem;
+}
+header .navbar ul li{
+    margin:0 2rem;
+}
+header .navbar ul li a{
+    color:#8bccbc;
+    font-size:3rem;
+}
+
+header .navbar ul li a:hover{
+    color:white;
+}
+/* container left side */
+.container{
+    margin-top:50px;
+    width:100%;
+    height:100%;
+    display: flex;
+}
+.container .leftstyle {
+    width: 50%;
+    display: flex; 
+    background:white;
+    float: left; 
+}
+.container .leftstyle img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.container .rightstyle{
+    width:100%;
+    height:500px;
+    background: #fff;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.container .rightstyle p{
+    text-align:left;
+    text-decoration: underline;
+    font-size:30px;
+}
+.container .rightstyle .login-form ul li {
+    font-size:4rem;
+    list-style:none;
+    margin-top:2rem;
+}
+.container .rightstyle .login-form form .btn{
+    width:30%;
+    height:0%;
+}
+.container .rightstyle .login-form form .mem-login .btn{
+    width:30%;
+    height:0%;
+    margin-left:10rem;
+}
+/* admin log-in */
+.container .login-form form .box{
+    padding:1.5rem 0;
+    margin:1.5rem 0;
+    width:70%;
+    border-radius:10px;
+    border:.2rem solid black;
+    text-transform: none;
+    color: black;
+    font-size: 1.5rem;
+}
+.container .login-form form .box::placeholder{
+    padding:1rem;
+    text-transform: uppercase;
+}
+.container .login-form form .box:focus{
+    border:2px solid #8bccbc;
+    border-radius:15px;
+}
+/* upload form comenses */
+
+.container .rightstyle2{
+    width:50%;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .rightstyle2 p{
+    text-align: center;
+    text-decoration: underline;
+    font-size:3rem;
+    padding:1rem;
+    justify-content:center;
+}
+/*event box alignment*/
+.event-form{
+    padding: 2rem;
+}
+.container .event-form form .box{
+    width:100%;
+    padding:0.7rem 0;
+    margin:0.7rem 0;
+    border-radius: 10px;
+    border:.2rem solid #666;
+    font-size:2rem;
+    color: #333;
+    text-transform: none;
+}
+/*event form input box text adjustment*/
+.container .event-form form .box::placeholder{
+    padding: 1rem;
+    text-transform:uppercase;
+    font-style: italic;
+}
+/*underline text adjustment*/
+.container .event-form form .box:focus{
+    border: 2px solid;
+    border-radius:15px;
+    border-color:#8bccbc;
+}
+.event-container .event-form form .btn{
+    width:25%;
+    height:0%;
+    margin:2rem 0;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+}
+/* blog form commenses */
+.blog-container{
+    background-color: white;
+    width:100%;
+    height:400px;
+    margin-top:2%;
+
+}
+.blog-container .leftstyle1 {
+    width:50%; 
+    height: 680px; 
+    float: left; 
+    background:white;
+    margin-right:2rem;
+}
+.blog-container .leftstyle1 img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    margin-top:4rem;
+}
+.container .rightstyle1{
+    width:50%;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .rightstyle1 p{
+    text-align: center;
+    text-decoration: underline;
+    font-size:3rem;
+    padding:1rem;
+    justify-content:center;
+}
+/*blog box adjustment*/
+.container .blog-form form .box{
+    width:100%;
+    padding:0.7rem 0;
+    margin:0.7rem 0;
+    border-radius: 10px;
+    border:.2rem solid #666;
+    font-size:2rem;
+    color: #333;
+    text-transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*blog input box text adjustment*/
+.container .blog-form form .box::placeholder{
+    padding: 1rem;
+    text-transform:uppercase;
+    font-style: italic;
+}
+/*underline text adjustment*/
+.container .blog-form form .box:focus{
+    border: 2px solid;
+    border-radius:15px;
+    border-color:rgb(255, 0, 0, 0.822);
+}
+.container .blog-form form .btn{
+    height:0%;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container h1{
+    font-size: 3rem;
+}
+
+/*member box adjustment*/
+.container .member-form{
+    padding: 3rem;
+}
+.container .member-form form .box{
+    width:100%;
+    padding:0.7rem 0;
+    margin:0.7rem 0;
+    border-radius: 10px;
+    border:.2rem solid #666;
+    font-size:2rem;
+    color: #333;
+    text-transform: none;
+}
+/*member input box text adjustment*/
+.member-container .member-form form .box::placeholder{
+    padding: 1rem;
+    text-transform:uppercase;
+    font-style: italic;
+}
+/*underline text adjustment*/
+.member-container .member-form form .box:focus{
+    border: 2px solid;
+    border-radius:15px;
+    border-color:#8bccbc;
+}
+.member-container .member-form form .btn{
+    width:25%;
+    height:0%;
+    margin:2rem 0;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    left:18%;
+    margin-left:20rem;
+    margin-top:2rem;
+}
